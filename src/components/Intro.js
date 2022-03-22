@@ -127,7 +127,7 @@ export default function Intro() {
                     className="tparticle" />
 
                 <img src={background} className="videoFluid" alt="BackGround" />
-                <MDBMask pattern={5} className="d-flex justify-content-center align-items-center">
+                <MDBMask pattern={5} className="d-flex position-absolute justify-content-center align-items-center">
                     <Container className="px-md-3 px-sm-0">
                         <Row>
                             <div className="zIndex2 mb-4 white-text text-center">
