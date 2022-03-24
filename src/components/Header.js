@@ -4,7 +4,7 @@ import signature from "./img/signature.png";
 
 export default function Header() {
     return (
-        <Navbar collapseOnSelect expand="lg" style={{ backgroundColor: "#060B1F" }} variant="dark" className="fixed-top top-0">
+        <Navbar collapseOnSelect expand="lg" style={{ backgroundColor: "#060B1F" }} variant="dark" className="fixed-top top-0 m-0 p-0">
             <Container>
                 <Navbar.Brand href="#Home">
                     <img

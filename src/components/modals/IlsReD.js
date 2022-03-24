@@ -39,6 +39,7 @@ export default function IlsReD(props) {
                             href="https://www.github.com/ayushpradhan9/Integrated-Library-Management-System"
                             id="source"
                             target="_blank"
+                            rel="noreferrer"
                         >
                             Source Code <i className="fab fa-github" />
                         </a>

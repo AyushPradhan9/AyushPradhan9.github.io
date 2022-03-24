@@ -36,6 +36,7 @@ export default function AppProfiler(props) {
                             href="https://github.com/AyushPradhan9/winFileSorter"
                             id="source"
                             target="_blank"
+                            rel="noreferrer"
                         >
                             Source Code <i className="fab fa-github" /></a>
                     </Button>

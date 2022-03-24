@@ -36,6 +36,7 @@ export default function ASmile(props) {
                                     href="https://ayushpradhan9.github.io/Product-Landing-Web-Page/"
                                     id="website"
                                     target="_blank"
+                                    rel="noreferrer"
                                 >
                                     View Website{' '}
                                     <i className="fas fa-external-link-alt" />
@@ -48,6 +49,7 @@ export default function ASmile(props) {
                                     href="https://github.com/AyushPradhan9/Product-Landing-Web-Page"
                                     id="source"
                                     target="_blank"
+                                    rel="noreferrer"
                                 >
                                     Source Code <i className="fab fa-github" />
                                 </a>

@@ -36,6 +36,7 @@ export default function ReddiTalk(props) {
                             href="https://github.com/ayushpradhan9/reddiTalk/"
                             id="source"
                             target="_blank"
+                            rel="noreferrer"
                         >
                             Source Code <i className="fab fa-github" />
                         </a>
