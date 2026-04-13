@@ -1,29 +1,43 @@
-import React from "react";
-import { Navbar, Container, Nav } from "react-bootstrap";
-import signature from "./img/signature.png";
+import React, { useEffect, useState } from "react";
+
+const links = [
+  { href: "#hero", label: "Start" },
+  { href: "#chapter-1", label: "Chapters" },
+  { href: "#building", label: "Building" },
+  { href: "#contact", label: "Contact" },
+];
 
 export default function Header() {
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+        const onScroll = () => setScrolled(window.scrollY > 30);
+        onScroll();
+        window.addEventListener("scroll", onScroll, { passive: true });
+        return () => window.removeEventListener("scroll", onScroll);
+    }, []);
+
     return (
-        <Navbar collapseOnSelect expand="lg" style={{ backgroundColor: "#060B1F" }} variant="dark" className="fixed-top top-0 m-0 p-0">
-            <Container>
-                <Navbar.Brand href="#Home">
-                    <img
-                        alt=""
-                        src={signature}
-                        width="240"
-                        height="55"
-                    />
-                </Navbar.Brand>
-                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                <Navbar.Collapse id="collapse responsive-navbar-nav">
-                    <Nav className="ml-auto text-center">
-                        <Nav.Link className="text-white h5" href="#About">About</Nav.Link>
-                        <Nav.Link className="text-white h5" href="#Skills">Skills</Nav.Link>
-                        <Nav.Link className="text-white h5" href="#Projects">Projects</Nav.Link>
-                        <Nav.Link className="text-white h5" href="#Contact">Contact</Nav.Link>
-                    </Nav>
-                </Navbar.Collapse>
-            </Container>
-        </Navbar>
+        <header className={`nav-pill ${scrolled ? "is-scrolled" : ""}`}>
+            <a href="#hero" className="nav-brand" aria-label="Home">
+                <span className="nav-brand-orb" />
+            </a>
+            <nav className="nav-links">
+                {links.map((l) => (
+                    <a key={l.href} href={l.href} className="nav-link">
+                        {l.label}
+                    </a>
+                ))}
+            </nav>
+            <a
+                href="https://github.com/AyushPradhan9"
+                target="_blank"
+                rel="noreferrer"
+                className="nav-cta"
+            >
+                GitHub
+                <span className="nav-cta-arrow">↗</span>
+            </a>
+        </header>
     );
-};
+}
